@@ -1,17 +1,19 @@
 import './App.css';
-import Calculadora from './components/Calcu';
-import State from './components/State';
+// import Calculadora from './components/Calcu';
+// import State from './components/State';
+import UseRef from './components/UseRef';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <div className="App-header">
         <h1> HOOKS </h1>
         {/* <Calculadora /> */}
-        <State />
+        {/* <State /> */}
+        <UseRef />
       </div>
     </div>
   );
-}
+};
 
 export default App;
