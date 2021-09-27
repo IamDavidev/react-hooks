@@ -1,8 +1,8 @@
 import './App.css';
+import Learning from './components/Learning';
 // import Calculadora from './components/Calcu';
 // import State from './components/State';
 import UseRef from './components/UseRef';
-
 const App = () => {
   return (
     <div className="App">
@@ -11,6 +11,7 @@ const App = () => {
         {/* <Calculadora /> */}
         {/* <State /> */}
         <UseRef />
+        <Learning />
       </div>
     </div>
   );
