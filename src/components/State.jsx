@@ -1,23 +1,22 @@
-import { useRef } from 'react';
+import { useState } from 'react';
+import Datos from './Datos';
 
 const State = () => {
-  const ref = useRef(null);
+  const [acount, setAcount] = useState(0);
+  const [memorize, setMemo] = useState(false);
   const handleClick = () => {
-    ref.current.value = 'hola mundo en rect';
-    ref.current.select()
+    setAcount(acount + 2);
   };
   return (
-    <div className="app__state">
-      <h2>useRef</h2>
-      <textarea
-        ref={ref}
-        name="nolose"
-        id="tutancamon"
-        cols="30"
-        rows="10"
-      ></textarea>
+    <div className="hooks__react">
+      <h2>
+        <strong>
+          <Datos value={acount} />
+        </strong>
+      </h2>
       <br />
-      <button onClick={handleClick}>imprimir hola mundo con useRef</button>
+      <button onClick={handleClick}> aumentar en dos el contador </button>
+      <button onClick={() => setMemo(!memorize)}>view memo</button>
     </div>
   );
 };
